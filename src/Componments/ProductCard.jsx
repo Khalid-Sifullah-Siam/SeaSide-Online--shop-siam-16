@@ -43,7 +43,7 @@ const ProductCard = ({ product }) => {
         </p>
 
         {/* Button */}
-        <button className="w-full mt-2 bg-orange-500 text-white py-2 rounded-xl font-semibold hover:bg-orange-600 transition">
+        <button className="w-full mt-2 cursor-pointer bg-orange-500 text-white py-2 rounded-xl font-semibold hover:bg-orange-600 transition">
           <Link href={`/all-products/${id}`}>
           View Details
           </Link>

@@ -104,7 +104,7 @@ const ProductDetails = ({ product }) => {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <button
                 onClick={handleCart}
-                className="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-4 rounded-2xl flex items-center justify-center gap-3 transition text-lg shadow-lg shadow-orange-500/30"
+                className="flex-1 bg-orange-600 cursor-pointer hover:bg-orange-700 text-white font-semibold py-4 rounded-2xl flex items-center justify-center gap-3 transition text-lg shadow-lg shadow-orange-500/30"
               >
                 <ShoppingCart className="w-6 h-6" />
                 Add to Cart
@@ -112,7 +112,7 @@ const ProductDetails = ({ product }) => {
 
               <button
                 onClick={handleOrder}
-                className="flex-1 border-2 border-gray-900 hover:bg-gray-900 hover:text-white font-semibold py-4 rounded-2xl transition text-lg"
+                className="flex-1 border-2 cursor-pointer border-gray-900 hover:bg-gray-900 hover:text-white font-semibold py-4 rounded-2xl transition text-lg"
               >
                 Order Now
               </button>

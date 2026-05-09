@@ -1,7 +1,11 @@
-
 import ProductCard from "@/Componments/ProductCard";
 import { readFile } from "fs/promises";
 import path from "path";
+
+export const metadata = {
+  title: "SeaSide | All Products",
+  description: "Browse every SeaSide product in one place.",
+};
 
 
 const AllProductsPage = async() => {

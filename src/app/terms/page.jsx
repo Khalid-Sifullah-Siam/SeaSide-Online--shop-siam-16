@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Terms & Conditions | SeaSide",
+  description: "Review the terms and conditions for using SeaSide.",
+};
+
 const TermsAndConditionPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-green-100 py-12 px-4">

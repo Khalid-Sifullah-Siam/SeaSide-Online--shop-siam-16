@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Refund Policy | SeaSide",
+  description: "Read SeaSide refund rules, eligibility, and request timelines.",
+};
+
 const RefundPolicyPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-green-100 py-12 px-4">
