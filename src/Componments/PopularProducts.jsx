@@ -1,10 +1,8 @@
 import ProductCard from "./ProductCard";
-import { readFile } from "fs/promises";
-import path from "path";
+import { getProducts } from "@/lib/products";
 
 const PopularProducts = async() => {
-    const filePath = path.join(process.cwd(), "public", "Products.json");
-    const productsObject = JSON.parse(await readFile(filePath, "utf8"));
+    const productsObject = await getProducts();
     
     return (
         <div className="my-12">

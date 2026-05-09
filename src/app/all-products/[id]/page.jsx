@@ -1,12 +1,9 @@
-import { readFile } from "fs/promises";
-import path from "path";
 import ProductDetails from "@/Componments/ProductDetails";
+import { getProductById } from "@/lib/products";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  const filePath = path.join(process.cwd(), "public", "Products.json");
-  const productsObject = JSON.parse(await readFile(filePath, "utf8"));
-  const product = productsObject.find((p) => parseInt(p.id) === parseInt(id));
+  const product = await getProductById(id);
 
   return {
     title: product ? `${product.name} | SeaSide` : "Product Details | SeaSide",
@@ -17,12 +14,7 @@ export async function generateMetadata({ params }) {
 const ProductDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  const filePath = path.join(process.cwd(), "public", "Products.json");
-  const productsObject = JSON.parse(await readFile(filePath, "utf8"));
-
-  const product = productsObject.find(
-    (p) => parseInt(p.id) === parseInt(id)
-  );
+  const product = await getProductById(id);
 
   if (!product) {
     return <div className="text-center py-20 text-2xl">Product not found</div>;

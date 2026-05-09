@@ -1,6 +1,5 @@
 import ProductCard from "@/Componments/ProductCard";
-import { readFile } from "fs/promises";
-import path from "path";
+import { getProducts } from "@/lib/products";
 
 export const metadata = {
   title: "SeaSide | All Products",
@@ -9,8 +8,7 @@ export const metadata = {
 
 
 const AllProductsPage = async() => {
-        const filePath = path.join(process.cwd(), "public", "Products.json");
-        const productsObject = JSON.parse(await readFile(filePath, "utf8"));
+        const productsObject = await getProducts();
     return (
         <div>
             <h1 className="text-orange-500 font-bold text-3xl text-center my-6">🔥 All Products</h1>
