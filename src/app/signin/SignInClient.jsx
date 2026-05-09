@@ -12,24 +12,33 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { useRouter } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
 export default function SignInClient() {
+  const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    const formData = new FormData(e.currentTarget);
+    const email = String(formData.get("email") || "");
+    const password = String(formData.get("password") || "");
 
     const { error } = await authClient.signIn.email({
       email,
       password,
-      callbackURL: "/",
     });
 
-    if (!error) toast.success("Sign in successful!");
-    else toast.error(error.message);
+    if (!error) {
+      toast.success("Sign in successful!");
+      router.refresh();
+      router.push("/");
+      return;
+    }
+
+    toast.error(error.message);
   };
 
   const handleGoogleSignIn = async () => {

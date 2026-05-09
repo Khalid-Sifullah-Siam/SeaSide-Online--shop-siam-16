@@ -33,12 +33,14 @@ export default function SignUpClient() {
       image,
     });
 
-    if (!error) {
-      toast.success("Registration successful!");
-      router.push("/");
-    } else {
+    if (error) {
       toast.error(error.message);
+      return;
     }
+
+    toast.success("Registration successful!");
+    router.refresh();
+    router.push("/");
   };
 
   const handleGoogleSignIn = async () => {
