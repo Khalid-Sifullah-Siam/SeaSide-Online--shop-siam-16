@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Running Shoes",
+    "brand": "FastTrack",
+    "price": 35,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Lightweight and comfortable running shoes for everyday use.",
+    "image": "/product-running-shoes.jpg",
+    "category": "Footwear"
+  },
+  {
+    "id": 2,
+    "name": "Leather Wallet",
+    "brand": "LuxCraft",
+    "price": 20,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Premium leather wallet with multiple compartments.",
+    "image": "/product-wallet.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Smart Fitness Watch",
+    "brand": "FitPro",
+    "price": 60,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Track your fitness, heart rate, and daily activity with ease.",
+    "image": "/product-watch.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": 4,
+    "name": "Men's Casual T-Shirt",
+    "brand": "UrbanWear",
+    "price": 12,
+    "rating": 4.3,
+    "stock": 40,
+    "description": "Comfortable cotton t-shirt suitable for daily wear.",
+    "image": "/product-tshirt.webp",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "Wireless Bluetooth Headphones",
+    "brand": "SoundMax",
+    "price": 45,
+    "rating": 4.5,
+    "stock": 25,
+    "description": "High-quality wireless headphones with deep bass and noise isolation.",
+    "image": "/product-headphones.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": 6,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "/product-sunglasses.png",
+    "category": "Accessories"
+  }
+]
